@@ -1,0 +1,28 @@
+.container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Poppins", sans-serif; */
+}
+.card-list {
+  width: 90%;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.button {
+  margin-top: 50px;
+  margin-bottom: 90px;
+  font-size: 16px;
+  background-color: rgb(17, 40, 214);
+  padding: 15px;
+  font-weight: bold;
+}
+
+.loading {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
