@@ -29,6 +29,10 @@ export default function index() {
               <FaRegUser className="icon" />
               About
             </NavLink>
+            <NavLink to="/Random" className="iconWrapper">
+              <FaRegUser className="icon" />
+              Random
+            </NavLink>
           </footer>
         </div>
       </div>

@@ -1,16 +1,15 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-//icon
 
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Explore from "./pages/Explore";
+import Random from "./pages/Random";
 import Category from "./pages/Category";
 import ProductDetail from "./pages/Detail";
 import IntroScreen from "./pages/IntroScreen";
+
 // Components
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -27,7 +26,9 @@ function App() {
           <Route exact path="/category" element={<Category />} />
           <Route exact path="/explore" element={<Explore />} />
           <Route exact path="/about" element={<About />} />
-          <Route path="/item/:id" element={<ProductDetail />}></Route>
+          {/* Rute untuk Random sudah tepat */}
+          <Route exact path="/random" element={<Random />} />
+          <Route path="/item/:id" element={<ProductDetail />} />
         </Routes>
         <Footer />
       </div>

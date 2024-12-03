@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 import ProductCard from "../components/product-card";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { BallTriangle } from "react-loader-spinner";
-
 import "./Home.css";
+
 export default function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,10 +31,11 @@ export default function Home() {
   if (loading) {
     return (
       <div className="loading">
-        <BallTriangle height={40} width={40} radius={5} color="black" ariaLabel="ball-triangle-loading" wrapperClass={{}} wrapperStyle="" visible={true} />{" "}
+        <BallTriangle height={40} width={40} radius={5} color="black" ariaLabel="ball-triangle-loading" wrapperClass={{}} wrapperStyle="" visible={true} />
       </div>
     );
   }
+
   if (error) {
     return <h3>Error...</h3>;
   }
@@ -44,12 +45,14 @@ export default function Home() {
       {/* <h2>SELAMAT BERBELANJA</h2> */}
       <div className="card-list">
         {data.map((item) => (
-          <ProductCard item={item} key={item._id} />
+          <ProductCard item={item} key={item.id} />
         ))}
       </div>
+
+      {/* Tombol menuju halaman Random */}
       <div className="button">
-        <NavLink to="/explore" className="all">
-          Explore More Products
+        <NavLink to="/random" state={{ items: data }} className="all">
+          Pick Random
           <IoIosArrowRoundForward className="icon-home" />
         </NavLink>
       </div>
